@@ -1,0 +1,28 @@
+{
+  "name": "translation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "edit-google-spreadsheet": "^0.2.21",
+    "google-sheets": "0.0.7",
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "google-sheets": "0.0.7",
+    "google-spreadsheet": "^1.1.4",
+    "gulp": "^3.9.1",
+    "gulp-exit": "0.0.2",
+    "gulp-mocha": "^2.2.0",
+    "mocha": "^2.4.5"
+  }
+}
