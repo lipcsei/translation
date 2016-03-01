@@ -15,21 +15,32 @@ class Transformer {
 
 
     createTranslation() {
-        let translations = [];
-
+        //let translations = [];
+        let i            = 2;
+        let language     = {};
         _.forEach(this.header, header => {
-            let language = new Language(header);
 
-            
+
+
+           let translations = [];
+
+            console.log(language);
             _.forEach(this.data, rows => {
-                _.forEach(rows, cell => {
-                    
-                    console.log(cell[0]);
-                    
-                })
+                let key   = _.find(rows, {col : 1}).value;
+                let value = _.find(rows, {col : i}).value;
+                let t     = new Translation(key, value);
+
+                translations.push(t);
+
             });
+            console.log(translations);
+            i++;
+
+            //language = new Language(header, translations);
             //translations.push(language);
         });
+
+//console.log(translations);
     }
 
 

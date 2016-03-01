@@ -1,4 +1,5 @@
 'use strict';
+let Translation = require('./Translation');
 
 class Language {
 
@@ -8,8 +9,13 @@ class Language {
     }
 
     add(translation) {
-        this.translations.push(translation);
-        return this;
+        if (translation instanceof Translation) {
+            this.translations.push(translation);
+            return this;
+        } else {
+            throw new Error('Invalid Translation')
+        }
+
     }
 }
 
